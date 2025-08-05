@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import "@fontsource/anton";
+
+@font-face {
+  font-family: 'ScoreboardFont';
+  src: url('./assets/fonts/scoreboard.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+.scoreboard-font {
+  font-family: 'ScoreboardFont', 'Courier New', monospace;
+  font-feature-settings: "tnum" 1; /* Use tabular numbers for consistent spacing */
+  /* Optional: Add some LED-style effects */
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.3);
+  letter-spacing: 0.05em;
+}
+
+/* Optional: Different weight for scores to make them pop */
+.scoreboard-font.score {
+  font-weight: bold;
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.5);
+}
